@@ -1,1 +1,1 @@
-python 学习记录
+python3 学习记录
