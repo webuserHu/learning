@@ -1,4 +1,5 @@
 0.基础
+   |___设置列表 : git config --list
    |___设置用户名 : git config --global user.name "xxx"
    |___设置邮箱 : git config --global user.email "xxx"
    |___生成SSH KEY : ssh-kengen -t rsa -C "xxx"(你的email) , 会在用户路径.ssh下生成两个文件,id_rsa和id_rsa.pub
@@ -8,7 +9,7 @@
    |___在某文件夹下执行 : git init
    |___目录下会多出.git文件夹
 2.添加文件到仓库
-   |___git add xxx.xxx(文件)
+   |___git add xxx.xxx(文件) , 可追加 --all 
    |___git commit -m "xxx"(提交说明)
 3.查看状态
    |___git status : 很重要,可以给你一些提示
@@ -31,7 +32,7 @@
 9.分支
    |___创建分支 : git branch xxx(分支名)
    |___切换分支 : git checkout xxx(分支名)
-   |___查看分支 : git branch , 前面带*表示当前分支
+   |___查看分支 : git branch , 前面带*表示当前分支 , 追加参数 -a 可显示所有分支
    |___合并分支 : git merge xxx(分支名), 需先切换到上一级分支,没有的话切换到主分支
    |___删除分支 : git branch -d xxx(分支名) , 未合并的分支会被提示使用-D
    |___查看分支合并图 : git log --graph / git log --graph --pretty=oneline --abbrev-commit
