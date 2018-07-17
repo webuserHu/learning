@@ -1,0 +1,14 @@
+1.破解:http://idea.lanyus.com/
+      或者license server处填写
+2.view 勾选tools bar
+3.快捷键使用eclipse的
+4.设置自动导包,settings搜索Auto Import
+5.代码忽略大小写,settings搜索Code Completion,case sensitive completion选None
+
+
+插件
+CodeGlance
+Grep Console
+python(python插件)
+jRebel for Intellij (热部署)https://www.cnblogs.com/wang1024/p/7211194.html
+
