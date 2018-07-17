@@ -1,0 +1,8 @@
+踩几个aspect的坑
+1.加jar包,aspectj-1.8.13.jar , aspectjweaver-1.8.13.jar
+2.在web.xml中DispatcherServlet指向的spring配置文件中加入aspect配置信息
+	头beans加aop依赖
+	下面加<context:component-scan base-package="xxx">(xxx为注解式的bean)
+	      <aop:aspectj-autoproxy proxy-target-class="true" />
+3.切面方法加@Aspect和@Component注解
+4.@Pointcut注解标注切面
