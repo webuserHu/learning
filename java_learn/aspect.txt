@@ -6,3 +6,7 @@
 	      <aop:aspectj-autoproxy proxy-target-class="true" />
 3.切面方法加@Aspect和@Component注解
 4.@Pointcut注解标注切面
+
+5.两种切面实现方式:
+	pointcut表达式,对路径下的方法做切面
+	把切面切到自定义注解上,再要切的地方打上自定义注解
