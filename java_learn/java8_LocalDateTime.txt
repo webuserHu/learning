@@ -1,0 +1,76 @@
+这是java8新加入的日期类型,相对以前的Date类型更加人性化,下面是一些常用方法一遍参考:
+1.新旧日期类的互相转换
+// 01. java.util.Date --> java.time.LocalDateTime
+public void UDateToLocalDateTime() {
+    java.util.Date date = new java.util.Date();
+    Instant instant = date.toInstant();
+    ZoneId zone = ZoneId.systemDefault();
+    LocalDateTime localDateTime = LocalDateTime.ofInstant(instant, zone);
+}
+
+// 02. java.util.Date --> java.time.LocalDate
+public void UDateToLocalDate() {
+    java.util.Date date = new java.util.Date();
+    Instant instant = date.toInstant();
+    ZoneId zone = ZoneId.systemDefault();
+    LocalDateTime localDateTime = LocalDateTime.ofInstant(instant, zone);
+    LocalDate localDate = localDateTime.toLocalDate();
+}
+
+// 03. java.util.Date --> java.time.LocalTime
+public void UDateToLocalTime() {
+    java.util.Date date = new java.util.Date();
+    Instant instant = date.toInstant();
+    ZoneId zone = ZoneId.systemDefault();
+    LocalDateTime localDateTime = LocalDateTime.ofInstant(instant, zone);
+    LocalTime localTime = localDateTime.toLocalTime();
+}
+
+
+// 04. java.time.LocalDateTime --> java.util.Date
+public void LocalDateTimeToUdate() {
+    LocalDateTime localDateTime = LocalDateTime.now();
+    ZoneId zone = ZoneId.systemDefault();
+    Instant instant = localDateTime.atZone(zone).toInstant();
+    java.util.Date date = Date.from(instant);
+}
+
+
+// 05. java.time.LocalDate --> java.util.Date
+public void LocalDateToUdate() {
+    LocalDate localDate = LocalDate.now();
+    ZoneId zone = ZoneId.systemDefault();
+    Instant instant = localDate.atStartOfDay().atZone(zone).toInstant();
+    java.util.Date date = Date.from(instant);
+}
+
+// 06. java.time.LocalTime --> java.util.Date
+public void LocalTimeToUdate() {
+    LocalTime localTime = LocalTime.now();
+    LocalDate localDate = LocalDate.now();
+    LocalDateTime localDateTime = LocalDateTime.of(localDate, localTime);
+    ZoneId zone = ZoneId.systemDefault();
+    Instant instant = localDateTime.atZone(zone).toInstant();
+    java.util.Date date = Date.from(instant);
+}
+
+2.日期加减
+// 01.新日期类
+LocalDate ld = LocalDate.of(2018.1.1);
+ld.plusDays(1);//加一天
+ld.plusMonths(1);//加一月
+ld.plusYears(1);//加一年
+ld.plusWeeks(1);//加一周
+
+ld.minusDays(1);//减一天
+ld.minusMonths(1);//减一月
+ld.minusYears(1);//减一年
+ld.minusWeeks(1);减一周
+
+// 02.旧日期类
+Date date = new Date();
+Calendar ca = Calendar.getInstance();
+ca.setTime(date);
+ca.add(Calendar.DAY_OF_MONTH,1);//加一天
+ca.add(Calendar.DAY_OF_MONTH,-1);//减一天
+date = ca.getTime();
