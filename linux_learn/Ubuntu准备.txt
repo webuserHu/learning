@@ -1,0 +1,18 @@
+# apt-get install open-vm-tools 
+#apt-get install open-vm* 
+
+sudo apt-get install openssh-client
+sudo apt-get install openssh-server
+
+jdk
+mysql
+tomcat
+git
+
+chmod [ u / g / o / a ] [ + / - / = ] [ r / w / x ] file
+
+创建用户 : adduser xxx , visudo 加一行权限
+删除用户 : visudo 删除权限 , userdel -r xxx
+用户加root权限 : visudo
+
+sysv-rc-conf : q退出
