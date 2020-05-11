@@ -2,14 +2,14 @@
    |___设置列表 : git config --list
    |___设置用户名 : git config --global user.name "xxx"
    |___设置邮箱 : git config --global user.email "xxx"
-   |___生成SSH KEY : ssh-kengen -t rsa -C "xxx"(你的email) , 会在用户路径.ssh下生成两个文件,id_rsa和id_rsa.pub
+   |___生成SSH KEY : ssh-keygen -t rsa -C "xxx"(你的email) , 会在用户路径.ssh下生成两个文件,id_rsa和id_rsa.pub
    |___id_rsa : 私钥，不能泄露出去
    |___id_rsa.pub : 公钥，可以放心地告诉任何人
 1.将某文件夹定义为git仓库
    |___在某文件夹下执行 : git init
    |___目录下会多出.git文件夹
 2.添加文件到仓库
-   |___git add xxx.xxx(文件) , 可追加 --all 
+   |___git add xxx.xxx(文件) , 可追加 --all
    |___git commit -m "xxx"(提交说明)
 3.查看状态
    |___git status : 很重要,可以给你一些提示
@@ -62,4 +62,4 @@
    |   			接下来只要提交就可以使用 git push origin master 将本地master分支推送至github
    |___clone远程库到本地 : git clone git@github.com:xxx1/xxx2.git xxx1是你的仓库Owner,xxx2是仓库名
    |    		注意第一次clone的时候会提示SSH警告,请确认后输入(yes/no)
-   |___参与开元项目 : 在该项目下点fork , 然后从自己账号下clone
+   |___参与开源项目 : 在该项目下点fork , 然后从自己账号下clone
