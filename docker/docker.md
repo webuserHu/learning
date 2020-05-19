@@ -3,7 +3,7 @@
 ` helloworld` : sudo docker run hello-world
 
 ```shell
-Hello from Docker!
+Hello from Docker! 
 ```
 
 
